@@ -7,4 +7,19 @@
     <title>Wordpress</title>
     <?php wp_head( )?>
 </head>
-<header>Header</header>
+<body <?php body_class( 'hello class' ); ?>>
+<?php 
+if(function_exists('wp_body_open')){
+    wp_body_open( );
+}
+?>
+<?php wp_body_open(); ?>
+<?php echo get_template_directory_uri().'/style.css' ?>
+<div id="page" class="site">
+    <hearder>
+
+    </hearder>
+    <div id="content" class="site-content">
+        
+    </div>
+</div>
