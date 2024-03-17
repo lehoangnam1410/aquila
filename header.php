@@ -14,12 +14,10 @@ if(function_exists('wp_body_open')){
 }
 ?>
 <?php wp_body_open(); ?>
-<?php echo get_template_directory_uri().'/style.css' ?>
 <div id="page" class="site">
-    <hearder>
-
+    <hearder id="masthead" class="site-header" role="banner" >
+        <?php get_template_part( 'template-parts/header/nav'); ?>
     </hearder>
     <div id="content" class="site-content">
-        
-    </div>
-</div>
+
+
