@@ -45,8 +45,45 @@ if(!function_exists('thanhpham_theme_setup')){
             'video',
             'gallery'
         ) );
+        $default_background = array(
+            'default-color'=> '#e8e8e8'
+        );
+        add_theme_support( 'custom-background', $default_background );
+        /* Them menu */
+        register_nav_menu( 'primary-menu', __('Primary Menu','lenam') );
+        /* Tao sidebar */
+        $sidebar = array(
+            'name'=>__('Main Sidebar','lenam'),
+            'id'=> ('main-sidebar'),
+            'description'=>__('Default sidebar')
+        );
+        register_sidebar( $sidebar );
     }
     add_action(  'init','thanhpham_theme_setup' );
 }
+/* TEMPLATE FUNCTIONS */
+if(!function_exists('lenam_template_function')){
+    function lenam_template_function(){?>
+        <div class="site-name">
+        <?php
+        if(is_home()){
+            printf('<h1><a href="%1$s" title="%2$s">%3$s</a></h1>',
+                get_bloginfo( 'url' ),
+                get_bloginfo( 'description' ),
+                get_bloginfo( 'wpurl' )
+            );
+        }
+        else {
+            printf('<h1><a href="%1$s" title="%2$s">%3$s</a></h1>',
+                get_bloginfo( 'url' ),
+                get_bloginfo( 'description' ),
+                get_bloginfo( 'wpurl' )
+            );
+        }
+        ?>
+        </div>
+        <?php
+    }
 
-?>
+}
+
