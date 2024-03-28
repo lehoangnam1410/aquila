@@ -1,4 +1,5 @@
 <?php get_header(); ?>
-<div class="content" id="content">
-</div>
+<?php 
+get_template_part( 'content','post' );
+?>
 <?php get_footer( ); ?>

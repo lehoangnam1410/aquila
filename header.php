@@ -17,7 +17,6 @@ if(function_exists('wp_body_open')){
 <?php wp_body_open(); ?>
 <div id="page" class="site">
     <hearder id="masthead" class="site-header" role="banner" >
-        <?php get_template_part( 'template-parts/header/nav'); ?>
     </hearder>
     <div class="logo">
         <?php lenam_template_function();  ?>
