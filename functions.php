@@ -73,9 +73,8 @@ if(!function_exists('lenam_template_function')){
 if(!function_exists('lenam_menu')){
     function lenam_menu($menu){
         $menu = array(
-            'theme_location' =>$menu,
-            'container' => 'nav',
-            'container_class' =>$menu
+           'theme_location' => $menu,
+           'menu_class'=>'nav'
         );
         wp_nav_menu( $menu );
     }
