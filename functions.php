@@ -141,7 +141,7 @@ if(!function_exists('thachpham_entry_header')){
             }
     }
 }
-/* */
+/*kasdkas */
 if(!function_exists('thachpham_entry_meta')){
     function thachpham_entry_meta(){
         if(is_single( )){?>
