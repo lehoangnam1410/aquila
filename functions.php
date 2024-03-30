@@ -114,5 +114,45 @@ if(!function_exists('lenam_pagination')){
     }
 
 }
+/*Hiển thị thumbnail */
+if(!function_exists('lenam_thumbnail')){
+    function lenam_thumbnail($size){
+        if(!is_single()&& has_post_thumbnail(  )&& !post_password_required( )|| has_post_format('image'))?>
+        <figure class="post-thumbnail">
+            <?php the_post_thumbnail( $size); ?>
+        </figure>
+        <?php
+        {
 
+        }
+    }
+}
+/* */
+if(!function_exists('thachpham_entry_header')){
+    function thachpham_entry_header(){
+        if(is_single( )){?>
+            <h1><a href="<?php the_permalink( ) ?>"><?php the_title() ?> </h1>
+            <?php
+            }
+            else{
+                ?>
+                 <h2><a href="<?php the_permalink( ) ?>"><?php the_title() ?> </h2>
+                <?php
+            }
+    }
+}
+/* */
+if(!function_exists('thachpham_entry_meta')){
+    function thachpham_entry_meta(){
+        if(is_single( )){?>
+        <h1><a href="<?php the_permalink( ) ?>"><?php the_title() ?> </h1>
+        <?php
+        }
+        else{
+            ?>
+             <h2><a href="<?php the_permalink( ) ?>"><?php the_title() ?> </h2>
+            <?php
+        }
+    }
+}
 
