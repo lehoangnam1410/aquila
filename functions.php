@@ -84,6 +84,35 @@ if(!function_exists('lenam_template_function')){
         </div>
         <?php
     }
+/*Thiet lap menu */
+if(!function_exists('lenam_menu')){
+    function lenam_menu($menu){
+        $menu = array(
+            'theme_location' =>$menu,
+            'container' => 'nav',
+            'container_class' =>$menu
+        );
+        wp_nav_menu( $menu );
+    }
+}
+/* phân trang đơn giản*/
+if(!function_exists('lenam_pagination')){
+        function lenam_pagination(){
+            if( $GLOBALS['wp_query']->max_num_pages < 2){
+                return '';
+            } ?>
+            <nav class="pagination" role="navigation">
+                <?php if(get_next_posts_link()) { ?>
+                    <div class="prev"><?php next_post_link(__('Older Posts','lenam')) ?></div>
+                <?php }?>
+                <?php if(get_previous_posts_link( )){ ?>
+                    <div class="next"><?php previous_post_link( __('Newest Posts','lenam') ) ?></div>
+                <?php }?>
+            </nav>
+            <?php
+        }
+    }
 
 }
+
 
