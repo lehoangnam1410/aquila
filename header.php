@@ -21,7 +21,8 @@ if(function_exists('wp_body_open')){
         <?php 
        lenam_menu('primary-menu');
         ?>
-        <?php lenam_template_function();  ?>
+        <?php lenam_template_function();  
+        ?>
     </div>
     <div id="content" class="site-content">
 

@@ -8,8 +8,5 @@ if(have_posts()){
 }
 else get_template_part( 'content', 'none' );
 ?>
-<?php lenam_pagination(); ?>
-<div id="sidebar">
-    <?php get_sidebar( );?>
-</div>
+
 <?php get_footer( ); 

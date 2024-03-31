@@ -69,6 +69,8 @@ if(!function_exists('lenam_template_function')){
         </div>
         <?php
     }
+}?>
+<?php
 /*Thiet lap menu */
 if(!function_exists('lenam_menu')){
     function lenam_menu($menu){
@@ -79,64 +81,4 @@ if(!function_exists('lenam_menu')){
         wp_nav_menu( $menu );
     }
 }
-/* phân trang đơn giản*/
-if(!function_exists('lenam_pagination')){
-        function lenam_pagination(){
-            if( $GLOBALS['wp_query']->max_num_pages < 2){
-                return '';
-            } ?>
-            <nav class="pagination" role="navigation">
-                <?php if(get_next_posts_link()) { ?>
-                    <div class="prev"><?php next_post_link(__('Older Posts','lenam')) ?></div>
-                <?php }?>
-                <?php if(get_previous_posts_link( )){ ?>
-                    <div class="next"><?php previous_post_link( __('Newest Posts','lenam') ) ?></div>
-                <?php }?>
-            </nav>
-            <?php
-        }
-    }
-
-}
-/*Hiển thị thumbnail */
-if(!function_exists('lenam_thumbnail')){
-    function lenam_thumbnail($size){
-        if(!is_single()&& has_post_thumbnail(  )&& !post_password_required( )|| has_post_format('image'))?>
-        <figure class="post-thumbnail">
-            <?php the_post_thumbnail( $size); ?>
-        </figure>
-        <?php
-        {
-
-        }
-    }
-}
-/* */
-if(!function_exists('thachpham_entry_header')){
-    function thachpham_entry_header(){
-        if(is_single( )){?>
-            <h1><a href="<?php the_permalink( ) ?>"><?php the_title() ?> </h1>
-            <?php
-            }
-            else{
-                ?>
-                 <h2><a href="<?php the_permalink( ) ?>"><?php the_title() ?> </h2>
-                <?php
-            }
-    }
-}
-/*kasdkas */
-if(!function_exists('thachpham_entry_meta')){
-    function thachpham_entry_meta(){
-        if(is_single( )){?>
-        <h1><a href="<?php the_permalink( ) ?>"><?php the_title() ?> </h1>
-        <?php
-        }
-        else{
-            ?>
-             <h2><a href="<?php the_permalink( ) ?>"><?php the_title() ?> </h2>
-            <?php
-        }
-    }
-}
-
+?>
